@@ -1,4 +1,4 @@
-# HERE IS THE SOLUTION WHICH WAS DONE IN FIRST ATTEMPT, WITHOUT OPTIMIZING RUNTIME
+# HERE IS THE SOLUTION WHICH WAS DONE IN FIRST ATTEMPT, WITHOUT OPTIMIZING RUNTIME - Time Complexity = O(n^2), Space Complexity = O(n)
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         #init flag to false
@@ -17,4 +17,19 @@ class Solution:
                     return i, j
 
 
-#SOLUTION WITH OPTIMIZING RUNTIME
+#SOLUTION WITH OPTIMIZING RUNTIME - Time Complexity: O(n), Space Complexity: O(n)
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        #init hashmap (map value to index)
+        prevMap = {}
+
+        #loop through the list with 2 vars (index and value)
+        for i, n in enumerate(nums):
+
+            #calculate difference and see whether difference is in hashMap
+            diff = target - n
+            if diff in prevMap:
+                return[prevMap[diff], i] #return value and index
+            
+            #if value isn't in hashmap, update hashmap
+            prevMap[n] = i
