@@ -9,7 +9,7 @@ class Solution:
 #ANOTHER WAY OF DOING THIS SIMILAR TO isAnagram:
 class Solution:
     def hasDuplicate(self, nums: List[int]) -> bool:
-         hashmap = {};
+         hashmap = {}
 
          for i in range(len(nums)):
             hashmap[nums[i]] = 1 + hashmap.get(nums[i], 0)
