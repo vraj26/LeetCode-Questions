@@ -1,4 +1,4 @@
-#Time: O(n), Space: O(n)
+#Time: O(m*n*26), Space: O(n)
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         result = defaultdict(list) #hashmap initialized such that there are no edge cases
