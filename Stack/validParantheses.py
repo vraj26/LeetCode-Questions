@@ -1,3 +1,4 @@
+#Time Complexity: O(n), Space Complexity: O(n)
 class Solution:
     def isValid(self, s: str) -> bool:
 
