@@ -1,3 +1,4 @@
+#Time Complexity: O(n), Space Complexity: O(1) (it is considered that the result array doesn't contribute to extra space)
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
 
